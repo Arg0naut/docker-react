@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -f Dockerfile.dev -t Arg0naut/docker-react .
+
+script:
+  - docker run Arg0naut/docker-react npm run test -- --coverage
