@@ -6,4 +6,4 @@ before_install:
   - docker build -t Arg0naut/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run Arg0naut/docker-react npm run test -- --coverage
+  - docker run arg0naut/docker-react npm run test -- --coverage
