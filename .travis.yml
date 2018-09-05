@@ -7,3 +7,9 @@ before_install:
 
 script:
   - docker run arg0naut/docker-react npm run test -- --coverage
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: e94aaafc-d218-459c-a89b-b4e22fe29875
+    app: mgardner-docker-react
