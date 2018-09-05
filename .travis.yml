@@ -1,15 +1,12 @@
 sudo: required
 services:
   - docker
-
 before_install:
   - docker build -t arg0naut/docker-react -f Dockerfile.dev .
-
 script:
   - docker run arg0naut/docker-react npm run test -- --coverage
-
 deploy:
   provider: heroku
   api_key:
-    secure: faf2b267-959e-4d7f-a740-582a193bb84a
+    secure: msla1x5a4+aAdnxdWxqOihD5xAdXAjr5zFk5KtRg/peIOAfD5UhbXxXoOHby/sMHxBN9fm7pdfLsrpUmyzNIIgQzEcwfKNLnaPnCmrb84fY6FlqJINALWf2GjaK6YDcpUsMMBZEtRJsN3mR77sHCqP9ZmhD/VsZRcN45NKhiFYUlRoDqrb4nGXp5wR2BMlGSUN1cQouK8R2b2w6GSaCbtNZwm/SNlGipOQc6hD9cI+lLuRaCXFGBa2YJQuH4FWZtuJz/CGKAJEaE7BIsPM2Bcyhbo59RiEdRoDiugG5TJho1FCjOVnXaY48LFvclfkFvfoJb257DCe0T0PJMkSmanN6p9jWl/o7lHxUt82VWermWEmfbSD13DqREDNdczBPgK1uNQOYUeB3KvYtuLbMkXs/jMj6luIGLfATvDLQnqX3aQPQ9IGIlw++nEVjom1GsPKS4zXZ007FgCqUVtjRJ7QnGG4ANAFwajBf8sqaJonm5zdUF1tAW28vBtdw1RwYS7kHLmoJVjztskZOLfLXSHOYjBJans6Xar6Ea3Wvu/uednlX08QNzjH6RaX4MA/2jiqAPD9Y50EHRk/zd9e7yQd4EZBs4ImAW38agV4aAkuBm91vt9xn4cr98ioCHFKPOY47sjSs7BiRy3Z15pKPraF1ucvaTOedMuWyLqw3uo1I=
     app: mgardner-react-project
