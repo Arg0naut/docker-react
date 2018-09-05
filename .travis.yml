@@ -11,5 +11,5 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: e94aaafc-d218-459c-a89b-b4e22fe29875
+    secure: faf2b267-959e-4d7f-a740-582a193bb84a
     app: mgardner-react-project
